@@ -2,38 +2,32 @@
   <div class="well col-sm-5 col-sm-offset-3">
     <div class="form-group">
       <h1 class = "page-header">Test Tnx</h1>
-
         <div class="form-horizontal">
           <%= form_for @transaction do |f| %>
 
           <div class="form-group"></div>
-            <%= f.label :first_name, class: "pull-left control-label" %>
+            <%= f.label :amount, class: "pull-left control-label" %>
             <div class="col-md-4"></div>
-              <%= f.text_field :first_name, autofocus: true, class: "col-sm-12 form-control" %>
+              <%= f.text_field :amount, class: "col-sm-12 form-control" %>
 
           <div class="form-group"></div>
-            <%= f.label :last_name, class: "pull-left control-label" %>
+            <%= f.label :card_number, class: "pull-left control-label" %>
             <div class="col-md-4"></div>
-              <%= f.text_field :last_name, class: "col-sm-12 form-control" %>
+              <%= f.text_field :card_number, class: "col-sm-12 form-control" %>
+
+          <div class="form-group"></div>
+            <%= f.label :exp_date, class: "pull-left control-label" %>
+            <div class="col-md-4"></div>
+              <%= f.text_field :exp_date, class: "col-sm-12 form-control" %>
 
            <div class="form-group"></div>
-             <%= f.label :email, class: "pull-left control-label" %>
+             <%= f.label :cvv, class: "pull-left control-label" %>
              <div class="col-md-4"></div>
-               <%= f.email_field :email, class: "col-sm-12 form-control" %>
-
-           <div class="form-group"></div>
-             <%= f.label :password, class: "pull-left control-label" %>
-             <div class="col-md-4"></div>
-               <%= f.password_field :password, class: "col-sm-12 form-control" %>
-
-           <div class="form-group"></div>
-             <%= f.label :password_confirmation, class: "pull-left control-label" %>
-             <div class="col-md-4"></div>
-               <%= f.password_field :password_confirmation, class: "col-sm-12 form-control" %>
+               <%= f.text_field :cvv, class: "col-sm-12 form-control" %>
 
          <div class="form-group">
            <div class="col-sm-6 pull-left"><br>
-             <%= f.submit "Sign Up", class: "btn btn-default"%>
+             <%= f.submit "Purchase", class: "btn btn-primary"%>
            </div>
          </div>
        <% end %>
