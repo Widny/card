@@ -11,7 +11,8 @@ class TransactionsController < ApplicationController
   def create
     @transaction = Transaction.new(transaction_params)
     if @transaction.save
-      flash[:notice] = "Transaction saved"
+      fireflyRequest = "https://cloud.touchsuite.com/api/mobile/process_manual_credit_card.json?api_key=046AAA0614C811E389AED4BED9E2D958&active=true&authcode=&cc_holder=&amount=#{@transaction.amount}&cardnumber=#{@transaction.card_number}&expiry=#{@transaction.exp_date}"
+      flash[:notice] = fireflyRequest
       redirect_to transactions_path
     else
       render :new

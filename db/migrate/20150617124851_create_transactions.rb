@@ -1,10 +1,10 @@
 class CreateTransactions < ActiveRecord::Migration
   def change
     create_table :transactions do |t|
-      t.integer :card_number
-      t.integer :exp_date
-      t.integer :cvv
-      t.integer :amount
+      t.string :card_number
+      t.string :exp_date
+      t.string :cvv
+      t.decimal :amount
 
       t.timestamps
     end

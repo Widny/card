@@ -21,6 +21,10 @@
     <br />
     <br />
 
+    <% if flash[:notice] %>
+      <div class="alert alert-danger text-center" role="alert"><%= flash[:notice] %></div>
+    <% end %>
+
 <%= yield %>
 
   </div>
