@@ -10,14 +10,13 @@
       <th><stong>Exp Date</strong></th>
       <th><stong>CVV</strong></th>
       <th><stong>Auth</strong></th>
-
     </tr>
   </thead>
 
   <% @transaction.each do |transaction| %>
     <tr>
       <td><%= transaction.amount %></td>
-      <td><%= "************#{transaction.card_number.to_s.slice!(12..16)}" %></td>
+      <td><%= "XXXX-XXXX-XXXX-#{transaction.card_number.to_s.slice!(12..16)}" %></td>
       <td><%= transaction.exp_date %></td>
       <td><%= transaction.cvv %></td>
       <td><%= transaction.auth_code %></td>
