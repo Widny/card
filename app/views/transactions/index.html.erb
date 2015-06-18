@@ -1,4 +1,4 @@
-<%= link_to "New", new_transaction_path(@transaction), class: "btn btn-primary pull-right" %>
+<%= link_to "New", new_transaction_path, class: "btn btn-primary pull-right" %>
 
 <h1>Transactions</h1>
 
@@ -9,6 +9,8 @@
       <th><stong>Card Number</strong></th>
       <th><stong>Exp Date</strong></th>
       <th><stong>CVV</strong></th>
+      <th><stong>Auth</strong></th>
+
     </tr>
   </thead>
 
@@ -18,6 +20,7 @@
       <td><%= transaction.card_number %></td>
       <td><%= transaction.exp_date %></td>
       <td><%= transaction.cvv %></td>
+      <td><%= transaction.auth_code %></td>
     </tr>
   <% end %>
 </table>
