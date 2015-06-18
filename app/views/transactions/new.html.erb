@@ -4,6 +4,16 @@
       <h1 class = "page-header">Test Tnx</h1>
         <div class="form-horizontal">
           <%= form_for @transaction do |f| %>
+            <div class= 'alert alert-danger'>
+            <% if @transaction.errors.any? %>
+              <ul>
+                <% @transaction.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+                <% end %>
+              </ul>
+            <% end %>
+          </div>
+
 
           <div class="form-group"></div>
             <%= f.label :amount, class: "pull-left control-label" %>
