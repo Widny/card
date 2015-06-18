@@ -31,5 +31,5 @@ class TransactionsController < ApplicationController
   def build_touchsuite_url_for_transaction
    "https://cloud.touchsuite.com/api/mobile/process_manual_credit_card.json?api_key=046AAA0614C811E389AED4BED9E2D958&active=true&authcode=&cc_holder=&amount=#{@transaction.amount}&cardnumber=#{@transaction.card_number}&expiry=#{@transaction.exp_date}"
   end
-
+  //hello world
 end
