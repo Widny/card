@@ -11,8 +11,34 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-//= require jquery
 //= require bootstrap-sprockets
+//= require card
+
+
+// $('form').card({
+// 	container: '.card-wrapper',
+
+// 	formSelectors: {
+// 		cvcInput: 'cvv',
+// 		numberInput: 'card_number',
+// 		expiryInput: 'exp_date',
+// 	},
+
+// });
+
+
+jQuery(function($) {
+	$('#new_transaction').card ({ 
+		container: '.card-wrapper', 
+		formSelectors: {
+			nameInput: 'input#transaction_full_name',
+			numberInput: 'input#transaction_card_number', 
+			expiryInput: 'input#transaction_exp_date', 
+			cvcInput: 'input#transaction_cvv'
+		},
+	});
+});
