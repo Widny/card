@@ -9,34 +9,15 @@ class TransactionsController < ApplicationController
   end
 
   def create
-
     @transaction = Transaction.new(transaction_params)
-
-
-    #Validation for CC Info here...
-
-
-
     fireflyRequest = RestClient.get(build_touchsuite_url_for_transaction)
-
-    @resp = nil
-    @resp = fireflyRequest if fireflyRequest
-
-
-    if @resp
-
-      @parseReq = JSON.parse @resp, symbolize_names:true
-
-            @transaction.update_attribute(:auth_code, @parseReq.first[:authorization_id_response])
-            if @transaction.save
-              flash[:notice] = "Waahoo! Transaction was approved for #{@transaction.amount}. Your Auth Code is #{@transaction.auth_code}"
-              redirect_to transactions_path
-            else
-              flash[:notice] = "Woops, something went wrong."
-              render :new
-            end
+    fireflyResponse = JSON.parse fireflyRequest, symbolize_names:true
+    @transaction.update_attribute(:auth_code, fireflyResponse.first[:authorization_id_response])
+    if @transaction.save
+      flash[:notice] = "Waahoo! Transaction was approved for #{@transaction.amount}. Your Auth Code is #{@transaction.auth_code}"
+      redirect_to transactions_path
     else
-      flash[:notice] = "Woops, Bad Call..."
+      flash[:notice] = "Whoops, something went wrong."
       render :new
     end
   end
