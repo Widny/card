@@ -19,10 +19,9 @@ class TransactionsController < ApplicationController
         else
           flash[:danger] = "Transaction Declined"
         end
-        # test
       redirect_to transactions_path
     else
-      flash[:notice] = "Whoops, something went wrong. Try again"
+      flash[:danger] = "Whoops, something went wrong. Try again"
       render :new
     end
   end
@@ -36,4 +35,8 @@ class TransactionsController < ApplicationController
   def firefly_request_url
    "https://cloud.touchsuite.com/api/mobile/process_manual_credit_card.json?api_key=046AAA0614C811E389AED4BED9E2D958&active=true&authcode=&cc_holder=&amount=#{@transaction.amount}&cardnumber=#{@transaction.card_number}&expiry=#{@transaction.exp_date}"
   end
+  # Test Card
+  # CC: 3566007770017510
+  # EXP: 0416
+  # CVV: 123 
 end
