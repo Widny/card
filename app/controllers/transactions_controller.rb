@@ -19,6 +19,7 @@ class TransactionsController < ApplicationController
         else
           flash[:danger] = "Transaction Declined"
         end
+        # test
       redirect_to transactions_path
     else
       flash[:notice] = "Whoops, something went wrong. Try again"
