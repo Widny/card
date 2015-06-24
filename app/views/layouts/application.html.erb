@@ -21,8 +21,12 @@
     <br />
     <br />
 
-    <% if flash[:notice] %>
-      <div class="alert alert-success text-center" role="alert"><%= flash[:notice] %></div>
+    <% if flash[:success] %>
+      <div class="alert alert-success text-center" role="alert"><%= flash[:success] %></div>
+    <% end %>
+
+    <% if flash[:danger] %>
+      <div class="alert alert-danger text-center" role="alert"><%= flash[:danger] %></div>
     <% end %>
 
 <%= yield %>
