@@ -31,14 +31,14 @@
 // });
 
 
-jQuery(function($) {
-	$('#new_transaction').card ({ 
-		container: '.card-wrapper', 
-		formSelectors: {
-			nameInput: 'input#transaction_full_name',
-			numberInput: 'input#transaction_card_number', 
-			expiryInput: 'input#transaction_exp_date', 
-			cvcInput: 'input#transaction_cvv'
-		},
-	});
-});
+// jQuery(function($) {
+// 	$('#new_transaction').card ({ 
+// 		container: '.card-wrapper', 
+// 		formSelectors: {
+// 			nameInput: 'input#transaction_full_name',
+// 			numberInput: 'input#transaction_card_number', 
+// 			expiryInput: 'input#transaction_exp_date', 
+// 			cvcInput: 'input#transaction_cvv'
+// 		},
+// 	});
+// });
