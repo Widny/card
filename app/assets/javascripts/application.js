@@ -31,14 +31,33 @@
 // });
 
 
-// jQuery(function($) {
-// 	$('#new_transaction').card ({ 
-// 		container: '.card-wrapper', 
-// 		formSelectors: {
-// 			nameInput: 'input#transaction_full_name',
-// 			numberInput: 'input#transaction_card_number', 
-// 			expiryInput: 'input#transaction_exp_date', 
-// 			cvcInput: 'input#transaction_cvv'
-// 		},
-// 	});
-// });
+jQuery(function($) {
+	$('#new_transaction').card ({ 
+		container: '.card-wrapper', 
+		formSelectors: {
+			nameInput: 'input#transaction_full_name',
+			numberInput: 'input#transaction_card_number',
+			expiryInput: 'input#transaction_exp_date',
+			cvcInput: 'input#transaction_cvv'
+		},
+
+		// $("#transaction_card_number").val($.trim($("#transaction_card_number").val()));
+		// $("input#transaction_card_number").replace(/\s/g, ' ');
+		// expiryInput.replace(/\//g, '').onSubmit,
+	});
+	
+	
+	// var expiry
+	
+		// $.trim("input#transaction_card_number");
+
+
+	// var expiryStr = "input#transaction_exp_date";
+	// expiryStr.replace(/\//g, '');
+	// var numStr = "input#transaction_card_number";
+	// var new_numStr = numStr.replace(/\s/g, '');
+
+
+	
+});
+

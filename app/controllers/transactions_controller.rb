@@ -30,13 +30,13 @@ class TransactionsController < ApplicationController
   private
 
   def transaction_params
-    params.require(:transaction).permit(:card_number, :exp_date, :cvv, :amount, :full_name, :api_key, )
+    params.require(:transaction).permit(:card_number, :exp_date, :cvv, :amount, :full_name, :api_key, :cust_zip)
   end
 
   
 
   def firefly_request_url
-   "https://cloud.touchsuite.com/api/mobile/process_manual_credit_card.json?api_key=#{@transaction.api_key}&active=true&authcode=&cc_holder=&amount=#{@transaction.amount}&cardnumber=#{@transaction.card_number}&expiry=#{@transaction.exp_date}"
+   "https://cloud.touchsuite.com/api/mobile/process_manual_credit_card.json?api_key=#{@transaction.api_key}&active=true&authcode=&cc_holder=&amount=#{@transaction.amount}&cardnumber=#{@transaction.card_number}&expiry=#{@transaction.exp_date}&custzip=#{@transaction.cust_zip}"
   end
   # Test Card
   # CC: 3566007770017510
