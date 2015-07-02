@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails card-sandbox: development" uuid="887da129-8620-4021-bd8b-e78be81a8936">
+      <first-sync>true</first-sync>
+    </data-source>
+    <data-source name="Rails card-sandbox: test" uuid="b80a936e-6714-4bcd-8665-6e657f17d3c4">
+      <first-sync>true</first-sync>
+    </data-source>
+    <data-source name="Rails card-sandbox: production" uuid="2b900283-58f7-4ddf-9216-126aa43c4f17">
+      <first-sync>true</first-sync>
+      <user-name>payment-auth-test-app</user-name>
+      <user-password>df96df8fdf97df8adfefdfe4dffcdff1df8ddffadfebdff3dfe7dfefdfe4dffedf87dfebdfffdffedfe2df87dffedfefdff9dffedf87dfebdffadffadff5dfeedfebdffedfebdfe8dfebdff9dfefdff5dffadfebdff9dff9dffddfe5dff8dfeedf8ddff7df8adf8fdf94</user-password>
+    </data-source>
+    <data-source name="PostgreSQL - @localhost" uuid="d16e9363-0694-4183-84cc-9294a91ce2cb">
+      <secret-storage>memory</secret-storage>
+      <first-sync>true</first-sync>
+    </data-source>
+    <data-source name="payment-auth-test-app_development" uuid="29f8b4af-fe70-466c-bb9c-bc8f42f8cf77">
+      <secret-storage>memory</secret-storage>
+      <schema-pattern>payment-auth-test-app_development.*</schema-pattern>
+      <default-schemas>payment-auth-test-app_development.*</default-schemas>
+    </data-source>
+  </component>
+</project>

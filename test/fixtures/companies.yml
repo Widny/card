@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  firefly_api_key: MyString
+  token_api_key: MyString
+
+two:
+  name: MyString
+  firefly_api_key: MyString
+  token_api_key: MyString

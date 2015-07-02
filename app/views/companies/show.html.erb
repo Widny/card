@@ -1,0 +1,23 @@
+<h1>Company Info</h1>
+
+
+
+
+
+<table class ='table'>
+	<thead>
+	<tr>
+		<th><strong>Company Name</strong></th>
+		<th><strong>Firefly API Key</strong></th>
+		<th><strong>Token API Key</strong></th>
+	</tr>
+	</thead>
+
+<tr>
+	<td><%= @company.name %></td>
+	<td><%= @company.firefly_api_key %></td>
+	<td><%= @company.token_api_key %></td>
+</tr>
+
+<%= link_to 'Make Payment', new_company_transaction_path(@company, @transaction) %>
+

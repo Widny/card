@@ -1,0 +1,87 @@
+Searching 95 files for "payment-auth-test-app"
+
+/Users/wstlouis/Desktop/card-sandbox/.idea/dataSources.ids:
+   13      <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+   14    </data-source>
+   15:   <data-source name="payment-auth-test-app_development" uuid="29f8b4af-fe70-466c-bb9c-bc8f42f8cf77">
+   16      <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+   17    </data-source>
+
+/Users/wstlouis/Desktop/card-sandbox/.idea/dataSources.local.xml:
+   10      <data-source name="Rails card-sandbox: production" uuid="2b900283-58f7-4ddf-9216-126aa43c4f17">
+   11        <first-sync>true</first-sync>
+   12:       <user-name>payment-auth-test-app</user-name>
+   13        <user-password>df96df8fdf97df8adfefdfe4dffcdff1df8ddffadfebdff3dfe7dfefdfe4dffedf87dfebdfffdffedfe2df87dffedfefdff9dffedf87dfebdffadffadff5dfeedfebdffedfebdfe8dfebdff9dfefdff5dffadfebdff9dff9dffddfe5dff8dfeedf8ddff7df8adf8fdf94</user-password>
+   14      </data-source>
+   ..
+   17        <first-sync>true</first-sync>
+   18      </data-source>
+   19:     <data-source name="payment-auth-test-app_development" uuid="29f8b4af-fe70-466c-bb9c-bc8f42f8cf77">
+   20        <secret-storage>memory</secret-storage>
+   21        <first-sync>true</first-sync>
+   22:       <user-name>payment-auth-test-app</user-name>
+   23      </data-source>
+   24    </component>
+
+/Users/wstlouis/Desktop/card-sandbox/.idea/dataSources.xml:
+    6        <synchronize>true</synchronize>
+    7        <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+    8:       <jdbc-url>jdbc:postgresql:payment-auth-test-app_development</jdbc-url>
+    9        <libraries />
+   10      </data-source>
+   ..
+   13        <synchronize>true</synchronize>
+   14        <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+   15:       <jdbc-url>jdbc:postgresql:payment-auth-test-app_test</jdbc-url>
+   16        <libraries />
+   17      </data-source>
+   ..
+   20        <synchronize>true</synchronize>
+   21        <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+   22:       <jdbc-url>jdbc:postgresql:payment-auth-test-app_production</jdbc-url>
+   23        <libraries />
+   24      </data-source>
+   ..
+   30        <libraries />
+   31      </data-source>
+   32:     <data-source source="LOCAL" name="payment-auth-test-app_development" uuid="29f8b4af-fe70-466c-bb9c-bc8f42f8cf77">
+   33        <driver-ref>postgresql</driver-ref>
+   34        <synchronize>true</synchronize>
+   35        <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+   36:       <jdbc-url>jdbc:postgresql://localhost:5432/payment-auth-test-app_development</jdbc-url>
+   37        <libraries />
+   38      </data-source>
+
+/Users/wstlouis/Desktop/card-sandbox/config/database.yml:
+   24  development:
+   25    <<: *default
+   26:   database: payment-auth-test-app_development
+   27  
+   28    # The specified database role being used to connect to postgres.
+   ..
+   30    # When left blank, postgres will use the default role. This is
+   31    # the same name as the operating system user that initialized the database.
+   32:   #username: payment-auth-test-app
+   33  
+   34    # The password associated with the postgres role (username).
+   ..
+   58  test:
+   59    <<: *default
+   60:   database: payment-auth-test-app_test
+   61  
+   62  # As with config/secrets.yml, you never want to store sensitive information,
+   ..
+   81  production:
+   82    <<: *default
+   83:   database: payment-auth-test-app_production
+   84:   username: payment-auth-test-app
+   85:   password: <%= ENV['PAYMENT-AUTH-TEST-APP_DATABASE_PASSWORD'] %>
+   86  
+
+/Users/wstlouis/Desktop/card-sandbox/config/initializers/session_store.rb:
+    1  # Be sure to restart your server when you modify this file.
+    2  
+    3: Rails.application.config.session_store :cookie_store, key: '_payment-auth-test-app_session'
+    4  
+
+16 matches across 5 files

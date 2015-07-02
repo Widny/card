@@ -1,4 +1,4 @@
-<%= link_to "New Transaction", new_transaction_path, class: "btn btn-primary pull-right" %>
+<%= link_to "New Transaction", new_company_transaction_path, class: "btn btn-primary pull-right" %>
 
 <h1>Transactions</h1>
 
@@ -13,7 +13,7 @@
     </tr>
   </thead>
 
-  <% @transaction.each do |transaction| %>
+  <% @transactions.each do |transaction| %>
     <tr>
       <td><%= transaction.amount %></td>
       <td><%= "XXXX-XXXX-XXXX-#{transaction.card_number.slice!(15..19)}" %></td>

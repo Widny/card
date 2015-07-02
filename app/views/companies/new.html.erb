@@ -1,0 +1,29 @@
+<h1> Create Company </h1>
+
+<%= form_for @company do |f| %>
+	<% if @company.errors.any? %>
+		<% @company.errors.full_messages.each do |msg| %>
+		<li><%= msg %></li>
+	<% end %>
+	<% end %>
+
+
+	<p>
+		<%= f.label :name %><br>
+		<%= f.text_field :name %> 
+	</p>
+
+	<p>
+		<%= f.label :firefly_api_key %><br>
+		<%= f.text_field :firefly_api_key %>
+	</p>
+
+	<p>
+		<%= f.label :token_api_key %><br>
+		<%= f.text_field :token_api_key %>
+	</p>
+
+	<p>
+		<%= f.submit %>
+	</p>
+<% end %>

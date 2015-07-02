@@ -1,0 +1,22 @@
+
+<h1> Listing Companies </h1>
+
+<table class= 'table'>
+	<thead>
+	<tr>
+		<th><strong>Name</strong></th>
+		<th><strong>Firefly API Key</strong></th>
+		<th><strong>Token API Key</strong></th>
+	</tr>
+	</thead>
+
+	<% @companies.each do |company| %>
+		<tr>
+			<td><%= company.name %></td>
+			<td><%= company.firefly_api_key %></td>
+			<td><%= company.token_api_key %></td>
+
+		</tr>
+	<% end %>
+	
+</table>

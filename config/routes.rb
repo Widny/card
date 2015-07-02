@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
 
-   root 'transactions#index'
+   root 'companies#index'
 
-   resources :transactions
+   
+   resources :companies do
+   	resources :transactions
+   end
+   
 
 end

@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5505f200-a04b-4a28-b3a5-53ff258993ca" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/card-sandbox.iml" afterPath="$PROJECT_DIR$/.idea/card-sandbox.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/transactions/index.html.erb" afterPath="$PROJECT_DIR$/app/views/transactions/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/transactions/new.html.erb" afterPath="$PROJECT_DIR$/app/views/transactions/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/transaction.rb" afterPath="$PROJECT_DIR$/app/models/transaction.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/transactions_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/transactions_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="card-sandbox.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -21,10 +28,83 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/card-sandbox@Development__card_sandbox.coverage" NAME="Development: card-sandbox Coverage Results" MODIFIED="1435092500296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="card-sandbox" />
+    <SUITE FILE_PATH="coverage/card-sandbox@Development__card_sandbox.coverage" NAME="Development: card-sandbox Coverage Results" MODIFIED="1435869757218" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="card-sandbox" />
+    <SUITE FILE_PATH="coverage/card-sandbox@db_migrate__card_sandbox.coverage" NAME="db:migrate: card-sandbox Coverage Results" MODIFIED="1435671536116" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="card-sandbox" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DatabaseView">
+    <option name="FLATTEN" value="false" />
+    <option name="GROUP_BY_TYPE" value="true" />
+    <option name="SORT_CHILDREN" value="false" />
+    <option name="SHOW_TABLE_CONSTRAINTS" value="true" />
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="payment-auth-test-app_development" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="payment-auth-test-app_development.public" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="payment-auth-test-app_development" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="payment-auth-test-app_development.public" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="transactions" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="payment-auth-test-app_development" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="payment-auth-test-app_development.public" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="schema_migrations" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="payment-auth-test-app_development" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -32,45 +112,104 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="application.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <file leaf-file-name="20150626182322_add_cust_zip_to_transaction.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20150626182322_add_cust_zip_to_transaction.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.39112905">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding>
-                <marker date="1435328984000" expanded="true" signature="968:1113" placeholder="{&quot;container&quot;: '.card-wrapper'...}" />
-                <marker date="1435328984000" expanded="true" signature="1019:1113" placeholder="{&quot;nameInput&quot;: 'input#transaction_full_name'...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery.card.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/jquery.card.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.6666666">
+            <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="transactions_controller.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/transactions_controller.rb">
+      <file leaf-file-name="20150629220816_create_companies.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20150629220816_create_companies.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="transaction.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/transaction.rb">
+      <file leaf-file-name="transactions_controller.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/transactions_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7826923">
+              <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="new.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/transactions/new.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.4166667">
+              <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="seeds.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/seeds.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="schema.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/schema.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding>
+                <marker date="1435868918000" expanded="true" signature="795:1697" placeholder="do ... end" />
+                <marker date="1435868918000" expanded="true" signature="953:1143" placeholder="do ... end" />
+                <marker date="1435868918000" expanded="true" signature="1192:1545" placeholder="do ... end" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20150617124851_create_transactions.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20150617124851_create_transactions.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="9" column="7" selection-start-line="2" selection-start-column="3" selection-end-line="9" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="company.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/company.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="payment-auth-test-app_development.public.schema_migrations" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/cff1c712/29f8b4af-fe70-466c-bb9c-bc8f42f8cf77/payment-auth-test-app_development.public.schema_migrations">
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+              <column-attributes>
+                <column name="ctid" enabled="false" />
+              </column-attributes>
             </state>
           </provider>
         </entry>
@@ -83,8 +222,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/controllers/transactions_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+        <option value="$PROJECT_DIR$/db/migrate/20150617124851_create_transactions.rb" />
+        <option value="$PROJECT_DIR$/db/schema.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/transactions_controller.rb" />
       </list>
     </option>
   </component>
@@ -103,10 +244,10 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="158" />
-    <option name="y" value="42" />
-    <option name="width" value="1400" />
-    <option name="height" value="933" />
+    <option name="x" value="11" />
+    <option name="y" value="23" />
+    <option name="width" value="1917" />
+    <option name="height" value="972" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -131,7 +272,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -161,6 +301,134 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="tmp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="card-sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="card-sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="log" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="card-sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="card-sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="card-sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="card-sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="card-sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="card-sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="card-sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="card-sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="locales" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="card-sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="card-sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="initializers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="card-sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="card-sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="environments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="card-sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="card-sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -256,8 +524,9 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -268,8 +537,36 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="Ruby.ViewRefParam.DefaultExtension" value="html.erb" />
     <property name="FullScreen" value="false" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="RakeTaksPopup.undocumentedIncluded" value="false" />
   </component>
   <component name="RunManager" selected="Rails.Development: card-sandbox">
+    <configuration default="false" name="db:migrate: card-sandbox" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
+      <module name="card-sandbox" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="development" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="db:migrate" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="CucumberRunConfigurationType" factoryName="Cucumber">
       <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
       <module name="" />
@@ -447,12 +744,18 @@
       <envs />
       <method />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Rake.test: card-sandbox" />
       <item index="1" class="java.lang.String" itemvalue="Rake.spec: card-sandbox" />
       <item index="2" class="java.lang.String" itemvalue="Rails.Production: card-sandbox" />
       <item index="3" class="java.lang.String" itemvalue="Rails.Development: card-sandbox" />
+      <item index="4" class="java.lang.String" itemvalue="Rake.db:migrate: card-sandbox" />
     </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Rake.db:migrate: card-sandbox" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration">
@@ -468,21 +771,21 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="158" y="42" width="1400" height="933" extended-state="0" />
-    <editor active="true" />
+    <frame x="11" y="23" width="1917" height="972" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295562" sideWeight="0.49791667" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18333334" sideWeight="0.49400103" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1799687" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34563106" sideWeight="0.753125" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39140534" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34563106" sideWeight="0.50208336" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1627543" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34555554" sideWeight="0.7501304" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3911111" sideWeight="0.49191445" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3911111" sideWeight="0.50808555" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -507,51 +810,26 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/app/controllers/transactions_controller.rb</url>
-          <line>19</line>
-          <option name="timeStamp" value="1" />
+          <line>23</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/app/controllers/transactions_controller.rb</url>
-          <line>32</line>
-          <option name="timeStamp" value="2" />
+          <line>24</line>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/app/controllers/transactions_controller.rb</url>
-          <line>30</line>
-          <option name="timeStamp" value="3" />
+          <line>49</line>
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/app/controllers/transactions_controller.rb</url>
-          <line>34</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/app/controllers/transactions_controller.rb</url>
-          <line>7</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/app/controllers/transactions_controller.rb</url>
-          <line>25</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/app/controllers/transactions_controller.rb</url>
-          <line>22</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/app/controllers/transactions_controller.rb</url>
-          <line>27</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/app/controllers/transactions_controller.rb</url>
-          <line>12</line>
-          <option name="timeStamp" value="13" />
+          <line>48</line>
+          <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="14" />
+      <option name="time" value="25" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="RailsRunConfigurationType">
@@ -562,10 +840,18 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/transaction.rb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/jquery.card.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -578,9 +864,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/transaction.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/transaction.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/jquery.card.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.6666666">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -588,12 +890,537 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.39112905">
+        <state vertical-scroll-proportion="0.0">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="56" column="44" selection-start-line="56" selection-start-column="44" selection-end-line="56" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/application.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/test.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/assets.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/backtrace_silencers.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/cookies_serializer.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/filter_parameter_logging.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/inflections.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/mime_types.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/session_store.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/wrap_parameters.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/boot.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environment.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/secrets.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/rake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/rails">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/bundle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/spring">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/setup">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20150618142456_add_auth_to_transactions.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20150623193414_add_full_name_to_transaction.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20150625155942_remove_api_key_to_transaction.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.ru">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/development.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/887da129-8620-4021-bd8b-e78be81a8936/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20150625163448_add_api_key_to_transaction.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/cff1c712/29f8b4af-fe70-466c-bb9c-bc8f42f8cf77/payment-auth-test-app_development.information_schema.tables">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/29f8b4af-fe70-466c-bb9c-bc8f42f8cf77">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>29f8b4af-fe70-466c-bb9c-bc8f42f8cf77</OriginalElement>
+          <nodes>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_stat_activity</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_db_role_setting</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_tables</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_auth_members</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_timezone_names</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.sql_implementation_info</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema._pg_user_mappings</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_statio_all_tables</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.role_column_grants</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_group</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_rules</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_collation</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_opclass</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.public.transactions</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.views</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.user_defined_types</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.role_routine_grants</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_user</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.user_mapping_options</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_index</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_cursors</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_foreign_table</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_description</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_user_mappings</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_extension</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.domain_udt_usage</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_stat_database_conflicts</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_stat_user_indexes</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.column_privileges</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.role_udt_grants</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.foreign_servers</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.column_udt_usage</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_stat_user_tables</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.column_options</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_indexes</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_ts_config_map</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.usage_privileges</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_replication_slots</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.public.schema_migrations</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.sql_packages</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.user_mappings</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.enabled_roles</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_statistic</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.column_domain_usage</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_stat_xact_user_tables</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_authid</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_language</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.domain_constraints</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_ts_dict</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.sql_sizing_profiles</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_rewrite</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_attribute</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_ts_parser</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_stat_sys_tables</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_seclabel</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_cast</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.routines</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_stat_replication</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.referential_constraints</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_seclabels</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_statio_user_tables</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_ts_config</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_settings</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_largeobject</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.information_schema_catalog_name</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_database</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.routine_privileges</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_prepared_statements</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_operator</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.role_usage_grants</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.foreign_server_options</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.tables</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_pltemplate</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_statio_user_indexes</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_views</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.applicable_roles</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_statio_all_sequences</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_tablespace</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.udt_privileges</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.collation_character_set_applicability</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.foreign_tables</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_aggregate</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_conversion</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema._pg_foreign_servers</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.data_type_privileges</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_stat_xact_all_tables</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.character_sets</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.collations</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema._pg_foreign_table_columns</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_stat_all_tables</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_proc</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.table_constraints</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_user_mapping</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_stats</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.sequences</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.table_privileges</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.administrable_role_authorizations</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_am</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_stat_all_indexes</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.sql_features</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_largeobject_metadata</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_namespace</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.public.companies</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_statio_sys_indexes</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_type</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_event_trigger</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_stat_user_functions</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.view_routine_usage</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_foreign_data_wrapper</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_stat_bgwriter</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.foreign_data_wrapper_options</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_shdepend</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_stat_sys_indexes</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.sql_sizing</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.element_types</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_statio_sys_sequences</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.schemata</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_default_acl</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_roles</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_stat_database</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.key_column_usage</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_statio_sys_tables</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.role_table_grants</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.sql_parts</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_stat_xact_user_functions</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.check_constraints</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_stat_xact_sys_tables</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_opfamily</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_available_extension_versions</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.view_table_usage</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.view_column_usage</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.foreign_data_wrappers</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_shadow</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_timezone_abbrevs</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.parameters</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_shseclabel</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_statio_all_indexes</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_range</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_statio_user_sequences</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.columns</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_foreign_server</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_prepared_xacts</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_matviews</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_ts_template</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_shdescription</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_attrdef</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.triggers</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema._pg_foreign_data_wrappers</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_enum</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.foreign_table_options</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_class</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.check_constraint_routine_usage</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema._pg_foreign_tables</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.constraint_table_usage</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.domains</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_inherits</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_constraint</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.sql_languages</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_available_extensions</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.triggered_update_columns</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_stat_archiver</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.constraint_column_usage</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_amop</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.information_schema.attributes</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_trigger</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_depend</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_locks</node>
+            <node x="" y="">29f8b4af-fe70-466c-bb9c-bc8f42f8cf77.table:payment-auth-test-app_development.pg_catalog.pg_amproc</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.487588713865328" x="970.9707824481682" y="5262.283548707754" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/cff1c712/29f8b4af-fe70-466c-bb9c-bc8f42f8cf77/payment-auth-test-app_development.public.transactions">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/company.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/cff1c712/29f8b4af-fe70-466c-bb9c-bc8f42f8cf77/payment-auth-test-app_development.public.schema_migrations">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+          <column-attributes>
+            <column name="ctid" enabled="false" />
+          </column-attributes>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20150626182322_add_cust_zip_to_transaction.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20150617124851_create_transactions.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="7" selection-start-line="2" selection-start-column="3" selection-end-line="9" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20150629220816_create_companies.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
-            <marker date="1435328984000" expanded="true" signature="968:1113" placeholder="{&quot;container&quot;: '.card-wrapper'...}" />
-            <marker date="1435328984000" expanded="true" signature="1019:1113" placeholder="{&quot;nameInput&quot;: 'input#transaction_full_name'...}" />
+            <marker date="1435868918000" expanded="true" signature="795:1697" placeholder="do ... end" />
+            <marker date="1435868918000" expanded="true" signature="953:1143" placeholder="do ... end" />
+            <marker date="1435868918000" expanded="true" signature="1192:1545" placeholder="do ... end" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/transactions/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.4166667">
+          <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/transactions_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7826923">
+          <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
