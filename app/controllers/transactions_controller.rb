@@ -3,8 +3,7 @@ class TransactionsController < ApplicationController
 
   def index
     @transactions = Transaction.all
-    #@companies = Company.all
-    #@transction = Transaction.find(params[:transaction_id])
+    
   end
 
   def new
@@ -13,17 +12,13 @@ class TransactionsController < ApplicationController
   end
 
   def show
-    #@transaction = Transaction.where(company_id: params[:id])
-    #@company = Company.find(params[:company_id])
+   # @transaction = Transaction.where(company_id: params[:id])
+   #  @company = Company.find(params[:company_id])
   end
-
-
 
 
   def create
     @company = Company.find(params[:company_id])
-    #@transaction = Transaction.new
-    #@company = Company.where(transaction_id: params[:id])
     @transaction = @company.transactions.new(transaction_params)
     fireflyRequest = RestClient.get(firefly_request_url)
     fireflyResponse = JSON.parse fireflyRequest, symbolize_names:true
@@ -50,8 +45,6 @@ class TransactionsController < ApplicationController
   
 
   def firefly_request_url
-    #@company = Company.find(params[:company_id])
-    #@card = @company.transaction.find[5].card_number
    "https://cloud.touchsuite.com/api/mobile/process_manual_credit_card.json?api_key=#{@company.firefly_api_key}&active=true&authcode=&cc_holder=&amount=#{@transaction.amount}&cardnumber=#{@transaction.card_number}&expiry=#{@transaction.exp_date}&custzip=#{@transaction.cust_zip}"
   end
   # Test Card

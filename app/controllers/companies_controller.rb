@@ -2,10 +2,6 @@ class CompaniesController < ApplicationController
 
 	def index 
 		@companies = Company.all
-
-		respond_to do |format|
-			format.json { render json: @comapnies}
-		end
 	end
 
 	def show
@@ -17,6 +13,7 @@ class CompaniesController < ApplicationController
 
 	def new
 		@company = Company.new
+		@transaction = Transaction.where(transaction_id: params[:id])
 	end
 
 	def create 
