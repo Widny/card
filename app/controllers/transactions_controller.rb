@@ -63,7 +63,7 @@ class TransactionsController < ApplicationController
   def token_request_url
 
     iplink = RestClient::Resource.new("https://api.iplink.co/v1/token", :headers => {
-        :authorization => 'Basic ' + 'api_5097F8E842F245D19DA55540E42F3BE6:secret_89f61775aba44912bb0c9a1b6cf0daa1',
+        :authorization => 'Basic ' + "#{@company.token_api_key}",
         :content_type => :json,
         :accept => :json,
     })
@@ -82,18 +82,6 @@ class TransactionsController < ApplicationController
     #   puts "#{ex.http_code}; #{result['code']} (#{result['message']})"
 
     end
-
-
-      
-
-    # 'https://api.iplink.co/v1/token',
-    #                 {:Authorization => 'Basic api_5097F8E842F245D19DA55540E42F3BE6:secret_89f61775aba44912bb0c9a1b6cf0daa1'},
-    #                 { :trancode => 'create',
-    #                   :expiration_month => @transaction.exp_date.first(2),
-    #                   :expiration_year => @transaction.exp_date.last(2).prepend("20"),
-    #                   :account => @transaction.card_number.gsub(/\s+/, "")
-    #                 }.to_json,
-    #                 :content_type => 'application/json')
     
   end
 
