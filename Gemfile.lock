@@ -89,6 +89,7 @@ GEM
       mime-types (>= 1.16, < 3)
     method_source (0.8.2)
     mime-types (2.6.1)
+    mime_types (0.0.1)
     mini_portile (0.6.2)
     minitest (5.7.0)
     multi_json (1.11.1)
@@ -180,9 +181,12 @@ DEPENDENCIES
   byebug
   card-rails
   coffee-rails (~> 4.1.0)
+  http-cookie
   jbuilder (~> 2.0)
   jquery-rails
   jquery-turbolinks
+  mime_types
+  netrc
   pg
   pry
   rails (= 4.2.1)

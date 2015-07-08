@@ -27,6 +27,12 @@ gem 'card-rails'
 
 gem 'jquery-turbolinks'
 
+gem 'mime_types'
+
+gem 'netrc'
+
+gem 'http-cookie'
+
 
 
 
