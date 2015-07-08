@@ -71,10 +71,10 @@ class TransactionsController < ApplicationController
     begin
       response = iplink.post(
         {
-          :transcode => "create",
-          :expiration_month => @transaction.exp_date.first(2).to_s,
-          :expiration_year => @transaction.exp_date.last(2).prepend("20").to_s,
-          :account => @transaction.card_number.gsub(/\s+/, "").to_s,
+          :trancode => "create",
+          :expiration_month => @transaction.exp_date.first(2),
+          :expiration_year => @transaction.exp_date.last(2).prepend("20"),
+          :account => @transaction.card_number.gsub(/\s+/, ""),
         }.to_json()              
       );
     # rescue RestClient::Exception => ex
