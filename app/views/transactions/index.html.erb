@@ -16,7 +16,7 @@
   <% @transactions.each do |transaction| %>
     <tr>
       <td><%= transaction.amount %></td>
-      <td><%= "XXXX-XXXX-XXXX-#{transaction.card_number.slice!(15..19)}" %></td>
+      
       <td><%= transaction.exp_date %></td>
       <td><%= transaction.cvv %></td>
       <td>

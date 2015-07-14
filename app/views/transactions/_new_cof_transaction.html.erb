@@ -1,11 +1,9 @@
-
-
 <div class="col-sm-12">
   <div class="well col-sm-5 col-sm-offset-3">
     <div class="form-group">
       <h1 class = "page-header">Test Tnx</h1>
         <div class="form-horizontal">
-          <%= form_for [@company, @transaction] do |f| %>
+          <%= form_for [@company, @transaction], url: company_new_cof_transaction_path do |f| %>
             <% if @transaction.errors.any? %>
            <!--  <div class= 'alert alert-danger'>
               <ul> -->
@@ -16,10 +14,10 @@
             <% end %>
           <!-- </div> -->
 
-        
 
-          <div class="card-wrapper"></div>
-         
+          
+        
+          
           
           
           <div class="form-group"></div>
@@ -27,25 +25,16 @@
             <div class="col-md-4"></div>
               <%= f.text_field :full_name, class: "col-sm-12 form-control" %>
 
+          <div class="form-group"><div>
+          <%= f.label :card_number,  class: "pull-left control-label" %>
+          <div class="col-md-4"></div>
+
+
           <div class="form-group"></div>
             <%= f.label :amount, class: "pull-left control-label" %>
             <div class="col-md-4"></div>
               <%= f.text_field :amount, class: "col-sm-12 form-control" %>
 
-          <div class="form-group"></div>
-            <%= f.label :card_number, class: "pull-left control-label" %>
-            <div class="col-md-4"></div>
-              <%= f.text_field :card_number, class: "col-sm-12 form-control" %>
-
-          <div class="form-group"></div>
-            <%= f.label :exp_date, "Exp Date", class: "pull-left control-label" %>
-            <div class="col-md-4"></div>
-              <%= f.text_field :exp_date, placeholder: "MM / YY", class: "col-sm-12 form-control" %>
-
-          <div class="form-group"></div>
-            <%= f.label :cvv, class: "pull-left control-label" %>
-            <div class="col-md-4"></div>
-              <%= f.text_field :cvv, class: "col-sm-12 form-control" %>
 
           <div class="form-group"></div>
             <%= f.label :cust_zip, "Zip Code", class: "pull-left control-label" %>
@@ -54,14 +43,11 @@
 
           <div class="form-group">
             <div class="col-sm-5 pull-left"><br>
-               <%= f.submit "Purchase", class: "btn btn-primary"%>
+               <%= f.submit "Use Card on File", class: "btn btn-primary"%>
              </div>
            </div>
-           
-           
        <% end %>
       </div>
    </div>
   </div>
-      
 </div>

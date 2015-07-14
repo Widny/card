@@ -1,6 +1,8 @@
 
 <h1> Listing Companies </h1>
 
+
+
 <table class= 'table'>
 	<thead>
 	<tr>
@@ -15,7 +17,12 @@
 			<td><%= company.name %></td>
 			<td><%= company.firefly_api_key %></td>
 			<td><%= company.token_api_key %></td>
+			<td><%= link_to "New Transaction", new_company_transaction_path(company) %></td>
+			
 			<td><%= link_to 'Show', company_path(company) %></td>
+			<td><%= link_to 'Delete', company_path(company),
+					method: :delete,
+					data: { confirm: 'Are you sure?'} %></td>
 
 		</tr>
 	<% end %>

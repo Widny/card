@@ -11,45 +11,53 @@ class TransactionsController < ApplicationController
     @transaction = Transaction.new
   end
 
+  # def new_cof_transaction
+  #   @company = Company.find(params[:company_id])
+  #   @transaction = @company.transactions.new
+  #   @transaction.card_number.last
+  #   @transaction.exp_date.last
+  #   @transaction.cust_zip.last
+  # end
+
+  # def create_cof_transaction
+  #   @company = Company.find(params[:company_id])
+    
+  #       redeem_iplink_token
+  #       redeemTokenResponse = JSON.parse redeem_iplink_token, symbolize_names:true
+  #       flash[:success] = "Successfully Redeemed Token #{@transaction.card_number}" 
+  #     else
+  #       render :new_cof_transaction
+  #     end
+  # end
+
+
+
   def show
-   # @transaction = Transaction.where(company_id: params[:id])
-   #  @company = Company.find(params[:company_id])
+   @transaction = Transaction.find(params[:transaction_id])
+   @company = Company.find(params[:company_id])
   end
+
+
 
   def create
     @company = Company.find(params[:company_id])
     @transaction = @company.transactions.new(transaction_params)
-    fireflyRequest = RestClient.get(firefly_request_url)
-    fireflyResponse = JSON.parse fireflyRequest, symbolize_names:true
-    @transaction.update_attribute(:auth_code, fireflyResponse.first[:authorization_id_response])
-    # tokenRequest = RestClient.post(token_request_url)
-    # tokenResponse = JSON.parse tokenRequest, symbolize_names:true
-    # @transaction.update_attribute(:token, tokenResponse[:token])
-    if @transaction.save
-        if @transaction.auth_code.present? 
-          flash[:success] = "Transaction was approved for #{@transaction.amount}. Your Auth Code is #{@transaction.auth_code}."
-          token_request_url
-          tokenResponse = JSON.parse token_request_url, symbolize_names:true 
-          @transaction.update_attribute(:token, tokenResponse[:token])
-          if @transaction.token.present?
-            flash[:success] = "Cheers, your token is #{@transaction.token}"
-          else
-            flash[:danger] = "Token not recieved"
-          end
-        else
-          flash[:danger] = "Transaction Declined"
-        end
-      redirect_to company_transactions_path(@company)
+    if firefly_process
+      if @transaction.save
+        process_iplink
+      end
+    redirect_to company_transactions_path(@company)
     else
       flash[:danger] = "Whoops, something went wrong. Try again"
       render :new
     end
   end
 
+
   private
 
   def transaction_params
-    params.require(:transaction).permit(:card_number, :exp_date, :cvv, :amount, :full_name, :cust_zip)
+    params.require(:transaction).permit(:card_number, :exp_date, :cvv, :amount, :full_name, :cust_zip, :auth_code, :token)
   end
 
   def firefly_request_url
@@ -60,15 +68,50 @@ class TransactionsController < ApplicationController
   # EXP: 0416
   # CVV: 123 
 
-  def token_request_url
+  def firefly_process
+    fireflyRequest = RestClient.get(firefly_request_url)
+    fireflyResponse = JSON.parse fireflyRequest, symbolize_names:true
+    @transaction.update_attribute(:auth_code, fireflyResponse.first[:authorization_id_response])
+      if @transaction.auth_code.present?
+        flash[:success] = "Transaction was approved for #{@transaction.amount}. Your Auth Code is #{@transaction.auth_code}."
+      else
+        flash[:danger] = "Transaction Declined"
+      end
+  end
 
+  def create_token
+    token_request_url 
+    tokenResponse = JSON.parse token_request_url, symbolize_names:true #parse the updated iplink object and get the iplink token
+    @company.update_attribute(:token, tokenResponse[:token])
+  end
+
+
+  def process_iplink
+    if @company.token.present?
+      redeem_iplink_token
+      redeemTokenResponse = JSON.parse redeem_iplink_token, symbolize_names:true
+      flash[:success] = "Successfully Redeemed Token #{@company.token}"
+    else
+      create_token
+      if @company.save
+        flash[:success] = "Cheers your new token is #{@company.token}"
+      else
+        flash[:dander] = "Token not received"
+      end
+
+    end
+  end
+
+
+  def token_request_url
+    #setup client
     iplink = RestClient::Resource.new("https://api.iplink.co/v1/token", :headers => {
         :authorization => 'Basic ' + "#{@company.token_api_key}",
         :content_type => :json,
         :accept => :json,
     })
-
     begin
+      #post the object 
       response = iplink.post(
         {
           :trancode => "create",
@@ -81,19 +124,27 @@ class TransactionsController < ApplicationController
     #   result = JSON.parse(ex.http_body)
     #   puts "#{ex.http_code}; #{result['code']} (#{result['message']})"
 
-    end
+    end    
+  end
+
+  def redeem_iplink_token
     
+    iplink = RestClient::Resource.new("https://api.iplink.co/v1/token", :headers => {
+      :authorization => 'Basic ' + "#{@company.token_api_key}",
+      :content_type => :json,
+      :accept => :json,
+    })    
+    begin
+      response = iplink.post(
+        {
+          :trancode => "redeem",
+          :token => @company.token,
+        }.to_json()
+      );
+    end
   end
 
 
-  # def token_request_url
-  #   account_expiration_month = @transaction.exp_date.first(2)
-  #   account_expiration_year = @transaction.exp_date.last(2).prepend("20")
-  #   account_number = @transaction.card_number.gsub(/\s+/, "")
-  #   url = 'https://api.iplink.co/v1/token'
-  #   request = {"data" => #{@company.token_api_key}&trancode=create&account=#{account_number}&expiration_month=#{account_expiration_month}&expiration_year=#{account_expiration_year}
-    
 
-  #   "https://api.iplink.co/v1/token.#{@company.token_api_key}&trancode=create&account=#{account_number}&expiration_month=#{account_expiration_month}&expiration_year=#{account_expiration_year}"
-  # end
 end
+

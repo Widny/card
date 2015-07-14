@@ -6,6 +6,7 @@ class CompaniesController < ApplicationController
 
 	def show
 		@company = Company.find(params[:id])
+		#@transaction = Transaction.find(params[:transaction_id])
 		#@transaction = Transaction.new
 		#@company = Company.where(company_)
 		@transaction = Transaction.where(company_id: params[:id])
@@ -13,7 +14,11 @@ class CompaniesController < ApplicationController
 
 	def new
 		@company = Company.new
-		@transaction = Transaction.where(transaction_id: params[:id])
+		# @transaction = Transaction.where(transaction_id: params[:id])
+	end
+
+	def edit
+		@company = Company.find(params[:id])
 	end
 
 	def create 
@@ -23,6 +28,23 @@ class CompaniesController < ApplicationController
 		else
 			render :new
 		end
+	end
+
+	def update
+		@company = Company.find(:params[:id])
+
+		if @company.update(company_params)
+			redirect_to @company
+		else
+			render 'edit'
+		end
+	end
+
+	def destroy 
+		@company = Company.find(params[:id])
+		@company.destroy
+
+		redirect_to companies_path
 	end
 
 
