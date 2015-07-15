@@ -1,5 +1,5 @@
 class TransactionsController < ApplicationController
-
+  helper_method :redeem_cc_from_token, :redeem_iplink_token, :redeemTokenResponse, :redeem_exp_date_from_token
 
   def index
     @transactions = Transaction.all
@@ -11,33 +11,31 @@ class TransactionsController < ApplicationController
     @transaction = Transaction.new
   end
 
-  # def new_cof_transaction
-  #   @company = Company.find(params[:company_id])
-  #   @transaction = @company.transactions.new
-  #   @transaction.card_number.last
-  #   @transaction.exp_date.last
-  #   @transaction.cust_zip.last
-  # end
+  def new_cof_transaction
+    @company = Company.find(params[:company_id])
+    @transaction = @company.transactions.new
+   
+  end
 
-  # def create_cof_transaction
-  #   @company = Company.find(params[:company_id])
-    
-  #       redeem_iplink_token
-  #       redeemTokenResponse = JSON.parse redeem_iplink_token, symbolize_names:true
-  #       flash[:success] = "Successfully Redeemed Token #{@transaction.card_number}" 
-  #     else
-  #       render :new_cof_transaction
-  #     end
-  # end
+  def redeem_cc_from_token
+    redeem_iplink_token
+    redeemTokenResponse = JSON.parse redeem_iplink_token, symbolize_names:true
+    redeemTokenResponse[:account]
+  end
 
+  def redeem_exp_date_from_token
+    redeem_iplink_token
+    redeemTokenResponse = JSON.parse redeem_iplink_token, symbolize_names:true
+    exp_month = redeemTokenResponse[:expiration_month]
+    exp_year = redeemTokenResponse[:expiration_year].slice(2..3)
+    expiration_date = exp_month.concat(exp_year)
+  end
 
 
   def show
    @transaction = Transaction.find(params[:transaction_id])
    @company = Company.find(params[:company_id])
   end
-
-
 
   def create
     @company = Company.find(params[:company_id])
@@ -79,30 +77,6 @@ class TransactionsController < ApplicationController
       end
   end
 
-  def create_token
-    token_request_url 
-    tokenResponse = JSON.parse token_request_url, symbolize_names:true #parse the updated iplink object and get the iplink token
-    @company.update_attribute(:token, tokenResponse[:token])
-  end
-
-
-  def process_iplink
-    if @company.token.present?
-      redeem_iplink_token
-      redeemTokenResponse = JSON.parse redeem_iplink_token, symbolize_names:true
-      flash[:success] = "Successfully Redeemed Token #{@company.token}"
-    else
-      create_token
-      if @company.save
-        flash[:success] = "Cheers your new token is #{@company.token}"
-      else
-        flash[:dander] = "Token not received"
-      end
-
-    end
-  end
-
-
   def token_request_url
     #setup client
     iplink = RestClient::Resource.new("https://api.iplink.co/v1/token", :headers => {
@@ -120,15 +94,16 @@ class TransactionsController < ApplicationController
           :account => @transaction.card_number.gsub(/\s+/, ""),
         }.to_json()              
       );
-    # rescue RestClient::Exception => ex
-    #   result = JSON.parse(ex.http_body)
-    #   puts "#{ex.http_code}; #{result['code']} (#{result['message']})"
-
     end    
   end
 
-  def redeem_iplink_token
-    
+  def create_iplink_token
+    token_request_url 
+    tokenResponse = JSON.parse token_request_url, symbolize_names:true #parse the updated iplink object and get the iplink token
+    @company.update_attribute(:token, tokenResponse[:token])
+  end
+
+  def redeem_iplink_token   
     iplink = RestClient::Resource.new("https://api.iplink.co/v1/token", :headers => {
       :authorization => 'Basic ' + "#{@company.token_api_key}",
       :content_type => :json,
@@ -144,7 +119,20 @@ class TransactionsController < ApplicationController
     end
   end
 
-
+  def process_iplink
+    if @company.token.present?
+      redeem_iplink_token
+      redeemTokenResponse = JSON.parse redeem_iplink_token, symbolize_names:true
+      flash[:success] = "Successfully Redeemed Token #{@company.token}"
+    else
+      create_iplink_token
+      if @company.save
+        flash[:success] = "Cheers your new token is #{@company.token}"
+      else
+        flash[:dander] = "Token not received"
+      end
+    end
+  end
 
 end
 

@@ -1,8 +1,4 @@
-<div class="col-sm-12">
-  <div class="well col-sm-5 col-sm-offset-3">
-    <div class="form-group">
-      <h1 class = "page-header">Test Tnx</h1>
-        <div class="form-horizontal">
+
           <%= form_for [@company, @transaction], url: company_new_cof_transaction_path do |f| %>
             <% if @transaction.errors.any? %>
            <!--  <div class= 'alert alert-danger'>
@@ -15,20 +11,21 @@
           <!-- </div> -->
 
 
-          
+          <div class="card-wrapper"></div>
         
-          
-          
+               
           
           <div class="form-group"></div>
             <%= f.label :full_name, class: "pull-left control-label" %>
             <div class="col-md-4"></div>
               <%= f.text_field :full_name, class: "col-sm-12 form-control" %>
 
-          <div class="form-group"><div>
-          <%= f.label :card_number,  class: "pull-left control-label" %>
-          <div class="col-md-4"></div>
+          
 
+          <%= f.hidden_field :card_number, :value => "#{redeem_cc_from_token}" %>
+          <%= f.hidden_field :exp_date,  :value => "#{redeem_exp_date_from_token}" %>
+
+          
 
           <div class="form-group"></div>
             <%= f.label :amount, class: "pull-left control-label" %>
@@ -47,7 +44,3 @@
              </div>
            </div>
        <% end %>
-      </div>
-   </div>
-  </div>
-</div>
