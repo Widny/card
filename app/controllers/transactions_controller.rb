@@ -1,9 +1,9 @@
 class TransactionsController < ApplicationController
+  
   helper_method :redeem_cc_from_token, :redeem_iplink_token, :redeemTokenResponse, :redeem_exp_date_from_token
 
   def index
-    @transactions = Transaction.all
-    
+    @transactions = Transaction.all   
   end
 
   def new
@@ -13,8 +13,7 @@ class TransactionsController < ApplicationController
 
   def new_cof_transaction
     @company = Company.find(params[:company_id])
-    @transaction = @company.transactions.new
-   
+    @transaction = @company.transactions.new  
   end
 
   def redeem_cc_from_token
@@ -50,7 +49,6 @@ class TransactionsController < ApplicationController
       render :new
     end
   end
-
 
   private
 
@@ -129,7 +127,7 @@ class TransactionsController < ApplicationController
       if @company.save
         flash[:success] = "Cheers your new token is #{@company.token}"
       else
-        flash[:dander] = "Token not received"
+        flash[:danger] = "Token not received"
       end
     end
   end
