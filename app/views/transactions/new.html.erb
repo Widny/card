@@ -7,27 +7,16 @@
         <div class="form-horizontal">
         <% if @company.token.present? %>
           <%= render 'new_cof_transaction' %>
-          <% else %>
+        <% else %>
           <%= form_for [@company, @transaction] do |f| %>
             <% if @transaction.errors.any? %>
-           <!--  <div class= 'alert alert-danger'>
-              <ul> -->
-                <% @transaction.errors.full_messages.each do |msg| %>
+              <% @transaction.errors.full_messages.each do |msg| %>
                 <li><%= msg %></li>
-                <% end %>
-              <!-- </ul> -->
             <% end %>
-          <!-- </div> -->
-
-        
+          <% end %>
 
           <div class="card-wrapper"></div>
-          
-
-          
-          
-          
-          
+                         
           <div class="form-group"></div>
             <%= f.label :full_name, class: "pull-left control-label" %>
             <div class="col-md-4"></div>
@@ -62,12 +51,10 @@
             <div class="col-sm-5 pull-left"><br>
                <%= f.submit "Purchase", class: "btn btn-primary"%>
              </div>
-           </div>
-           
-           
+          </div>   
        <% end %>
       </div>
    </div>
   </div>
-      <% end %>
+  <% end %>
 </div>

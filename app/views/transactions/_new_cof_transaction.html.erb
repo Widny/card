@@ -1,46 +1,34 @@
 
-          <%= form_for [@company, @transaction], url: company_new_cof_transaction_path do |f| %>
-            <% if @transaction.errors.any? %>
-           <!--  <div class= 'alert alert-danger'>
-              <ul> -->
-                <% @transaction.errors.full_messages.each do |msg| %>
-                <li><%= msg %></li>
-                <% end %>
-              <!-- </ul> -->
-            <% end %>
-          <!-- </div> -->
-
-
-          <div class="card-wrapper"></div>
+<%= form_for [@company, @transaction], url: company_new_cof_transaction_path do |f| %>
+  <% if @transaction.errors.any? %>
+    <% @transaction.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  <% end %>
         
-               
-          
-          <div class="form-group"></div>
-            <%= f.label :full_name, class: "pull-left control-label" %>
-            <div class="col-md-4"></div>
-              <%= f.text_field :full_name, class: "col-sm-12 form-control" %>
+  <div class="card-wrapper"></div>
+                  
+  <div class="form-group"></div>
+    <%= f.label :full_name, class: "pull-left control-label" %>
+    <div class="col-md-4"></div>
+      <%= f.text_field :full_name, class: "col-sm-12 form-control" %>
 
-          
+    <%= f.hidden_field :card_number, :value => "#{redeem_cc_from_token}" %>
+    <%= f.hidden_field :exp_date,  :value => "#{redeem_exp_date_from_token}" %>
 
-          <%= f.hidden_field :card_number, :value => "#{redeem_cc_from_token}" %>
-          <%= f.hidden_field :exp_date,  :value => "#{redeem_exp_date_from_token}" %>
+  <div class="form-group"></div>
+    <%= f.label :amount, class: "pull-left control-label" %>
+    <div class="col-md-4"></div>
+      <%= f.text_field :amount, class: "col-sm-12 form-control" %>
 
-          
+  <div class="form-group"></div>
+    <%= f.label :cust_zip, "Zip Code", class: "pull-left control-label" %>
+    <div class="col-md-4"></div>
+      <%= f.text_field :cust_zip, class: "col-sm-12 form-control" %>
 
-          <div class="form-group"></div>
-            <%= f.label :amount, class: "pull-left control-label" %>
-            <div class="col-md-4"></div>
-              <%= f.text_field :amount, class: "col-sm-12 form-control" %>
-
-
-          <div class="form-group"></div>
-            <%= f.label :cust_zip, "Zip Code", class: "pull-left control-label" %>
-            <div class="col-md-4"></div>
-              <%= f.text_field :cust_zip, class: "col-sm-12 form-control" %>
-
-          <div class="form-group">
-            <div class="col-sm-5 pull-left"><br>
-               <%= f.submit "Use Card on File", class: "btn btn-primary"%>
-             </div>
-           </div>
-       <% end %>
+  <div class="form-group">
+    <div class="col-sm-5 pull-left"><br>
+        <%= f.submit "Use Card on File", class: "btn btn-primary"%>
+    </div>
+  </div>
+<% end %>

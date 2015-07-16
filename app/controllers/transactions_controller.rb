@@ -30,7 +30,6 @@ class TransactionsController < ApplicationController
     expiration_date = exp_month.concat(exp_year)
   end
 
-
   def show
    @transaction = Transaction.find(params[:transaction_id])
    @company = Company.find(params[:company_id])
