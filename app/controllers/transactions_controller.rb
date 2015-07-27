@@ -30,6 +30,12 @@ class TransactionsController < ApplicationController
     expiration_date = exp_month.concat(exp_year)
   end
 
+  def edit_cof_transaction
+    @company = Company.find(params[:company_id])
+    @transaction = @company.transactions.find_or_initialize_by(id: @transaction)
+    render :_edit_cof_transaction
+  end
+
   def show
    @transaction = Transaction.find(params[:transaction_id])
    @company = Company.find(params[:company_id])
@@ -49,10 +55,26 @@ class TransactionsController < ApplicationController
     end
   end
 
+  def update 
+    @company = Company.find(params[:company_id])
+    @transaction = @company.transactions.build(params_to_update_iplink_token)
+      if @transaction.save
+        process_iplink_update
+        redirect_to company_path(@company)
+      else
+        flash[:danger] = "Whoops, somehthing went wrong. Try again"  
+      end
+  end
+
+
   private
 
   def transaction_params
     params.require(:transaction).permit(:card_number, :exp_date, :cvv, :amount, :full_name, :cust_zip, :auth_code, :token)
+  end
+
+  def params_to_update_iplink_token
+    params.require(:transaction).permit(:card_number, :exp_date, :cvv, :full_name, :cust_zip)
   end
 
   def firefly_request_url
@@ -116,11 +138,40 @@ class TransactionsController < ApplicationController
     end
   end
 
+  def update_iplink_token
+    iplink = RestClient::Resource.new("https://api.iplink.co/v1/token", :headers => {
+      :authorization => 'Basic ' + "#{@company.token_api_key}",
+      :content_type => :json,
+      :accept => :json,
+    })
+    begin
+      response = iplink.post(
+        {
+          :trancode => "update",
+          :token => @company.token,
+          :account => @transaction.card_number.gsub(/\s+/, ""),
+          :expiration_month => @transaction.exp_date.first(2),
+          :expiration_year => @transaction.exp_date.last(2).prepend("20"),
+        }.to_json()
+      );
+    end
+  end
+
+  def process_iplink_update
+    update_iplink_token
+    updateTokenResponse = JSON.parse update_iplink_token, symbolize_names:true
+    if updateTokenResponse[:status] ==  "Success"
+      flash[:success] = "Successfully Updated Token #{@company.token}"
+    else
+      flash[:danger] = "Token was not updated"
+    end
+  end
+
   def process_iplink
     if @company.token.present?
       redeem_iplink_token
       redeemTokenResponse = JSON.parse redeem_iplink_token, symbolize_names:true
-      flash[:success] = "Successfully Redeemed Token #{@company.token}"
+      flash[:success] = "Successfully Redeemed Token #{@company.token}"   
     else
       create_iplink_token
       if @company.save

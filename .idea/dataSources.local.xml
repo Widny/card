@@ -2,10 +2,12 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="Rails card-sandbox: development" uuid="887da129-8620-4021-bd8b-e78be81a8936">
-      <first-sync>true</first-sync>
+      <schema-pattern>payment-auth-test-app_development.*</schema-pattern>
+      <default-schemas>payment-auth-test-app_development.*</default-schemas>
     </data-source>
     <data-source name="Rails card-sandbox: test" uuid="b80a936e-6714-4bcd-8665-6e657f17d3c4">
-      <first-sync>true</first-sync>
+      <schema-pattern>payment-auth-test-app_test.*</schema-pattern>
+      <default-schemas>payment-auth-test-app_test.*</default-schemas>
     </data-source>
     <data-source name="Rails card-sandbox: production" uuid="2b900283-58f7-4ddf-9216-126aa43c4f17">
       <first-sync>true</first-sync>

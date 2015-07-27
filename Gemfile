@@ -33,6 +33,7 @@ gem 'netrc'
 
 gem 'http-cookie'
 
+gem 'best_in_place', '~> 3.0.1'
 
 
 

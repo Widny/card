@@ -1,0 +1,49 @@
+<div class="col-sm-12">
+  <div class="well col-sm-5 col-sm-offset-3">
+    <div class="form-group">
+      <h1 class = "page-header">Test Tnx</h1>
+        <div class="form-horizontal">
+        <%= form_for [@company, @transaction], url: company_edit_cof_transaction_path, method: :patch do |f| %>
+          <% if @transaction.errors.any? %>
+            <% @transaction.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+        <% end %>
+
+        <div class="card-wrapper"></div>
+                         
+        <div class="form-group"></div>
+          <%= f.label :full_name, class: "pull-left control-label" %>
+          <div class="col-md-4"></div>
+            <%= f.text_field :full_name, :value => "#{@company.transactions.take.full_name}", class: "col-sm-12 form-control" %>
+
+        <div class="form-group"></div>
+          <%= f.label :card_number, class: "pull-left control-label" %>
+          <div class="col-md-4"></div>
+            <%= f.text_field :card_number, :value => "#{redeem_cc_from_token}", class: "col-sm-12 form-control" %>
+
+        <div class="form-group"></div>
+          <%= f.label :exp_date, "Exp Date", class: "pull-left control-label" %>
+          <div class="col-md-4"></div>
+            <%= f.text_field :exp_date, :value => "#{redeem_exp_date_from_token}", class: "col-sm-12 form-control" %>
+
+        <div class="form-group"></div>
+          <%= f.label :cvv, class: "pull-left control-label" %>
+          <div class="col-md-4"></div>
+            <%= f.text_field :cvv, class: "col-sm-12 form-control" %>
+
+        <div class="form-group"></div>
+          <%= f.label :cust_zip, "Zip Code", class: "pull-left control-label" %>
+          <div class="col-md-4"></div>
+            <%= f.text_field :cust_zip, class: "col-sm-12 form-control" %>
+
+        <div class="form-group">
+          <div class="col-sm-5 pull-left"><br>
+            <%= f.submit "Update Card", class: "btn btn-primary"%>
+          </div>
+        </div>   
+      <% end %>
+    </div>
+   </div>
+  </div>
+</div>

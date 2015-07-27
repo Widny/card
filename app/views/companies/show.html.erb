@@ -19,5 +19,6 @@
 	<td><%= @company.token_api_key %></td>
 </tr>
 
-<%= link_to 'Make Payment', new_company_transaction_path(@company, @transaction) %>
+<%= link_to 'Make Payment', new_company_transaction_path(@company, @transaction) %><br>
+<%= link_to 'Update Card', company_edit_cof_transaction_path(@company, @transaction) %>
 
